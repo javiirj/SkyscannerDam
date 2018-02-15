@@ -24,7 +24,7 @@ import java.util.List;
 public class VueloFragment extends Fragment {
 
     private int mColumnCount = 1;
-    private OnListFragmentInteractionListener mListener;
+    private OnVueloInteractionListener mListener;
     private List<Vuelo> vueloList;
     MyVueloRecyclerViewAdapter adapter;
 
@@ -47,11 +47,11 @@ public class VueloFragment extends Fragment {
 
         vueloList = new ArrayList<>();
         vueloList.add(new Vuelo("Sevilla", "Madrid", "13:30", 2.30, 100, "http://www.lavanguardia.com/r/GODO/LV/p4/WebSite/2017/08/28/Recortada/img_cpizcueto_20170828-120600_imagenes_lv_terceros_avion-kN7-U43885684875JvF-992x558@LaVanguardia-Web.jpg"));
-        vueloList.add(new Vuelo("Sevilla", "Madrid", "13:30", 2.30, 100, "http://www.lavanguardia.com/r/GODO/LV/p4/WebSite/2017/08/28/Recortada/img_cpizcueto_20170828-120600_imagenes_lv_terceros_avion-kN7-U43885684875JvF-992x558@LaVanguardia-Web.jpg"));
-        vueloList.add(new Vuelo("Sevilla", "Madrid", "13:30", 2.30, 100, "http://www.lavanguardia.com/r/GODO/LV/p4/WebSite/2017/08/28/Recortada/img_cpizcueto_20170828-120600_imagenes_lv_terceros_avion-kN7-U43885684875JvF-992x558@LaVanguardia-Web.jpg"));
-        vueloList.add(new Vuelo("Sevilla", "Madrid", "13:30", 2.30, 100, "http://www.lavanguardia.com/r/GODO/LV/p4/WebSite/2017/08/28/Recortada/img_cpizcueto_20170828-120600_imagenes_lv_terceros_avion-kN7-U43885684875JvF-992x558@LaVanguardia-Web.jpg"));
-        vueloList.add(new Vuelo("Sevilla", "Madrid", "13:30", 2.30, 100, "http://www.lavanguardia.com/r/GODO/LV/p4/WebSite/2017/08/28/Recortada/img_cpizcueto_20170828-120600_imagenes_lv_terceros_avion-kN7-U43885684875JvF-992x558@LaVanguardia-Web.jpg"));
-        vueloList.add(new Vuelo("Sevilla", "Madrid", "13:30", 2.30, 100, "http://www.lavanguardia.com/r/GODO/LV/p4/WebSite/2017/08/28/Recortada/img_cpizcueto_20170828-120600_imagenes_lv_terceros_avion-kN7-U43885684875JvF-992x558@LaVanguardia-Web.jpg"));
+        vueloList.add(new Vuelo("Granada", "Barcelona", "17:25", 4, 200, "http://www.lavanguardia.com/r/GODO/LV/p4/WebSite/2017/08/28/Recortada/img_cpizcueto_20170828-120600_imagenes_lv_terceros_avion-kN7-U43885684875JvF-992x558@LaVanguardia-Web.jpg"));
+        vueloList.add(new Vuelo("Valencia", "Madrid", "13:30", 2.50, 80, "http://www.lavanguardia.com/r/GODO/LV/p4/WebSite/2017/08/28/Recortada/img_cpizcueto_20170828-120600_imagenes_lv_terceros_avion-kN7-U43885684875JvF-992x558@LaVanguardia-Web.jpg"));
+        vueloList.add(new Vuelo("Sevilla", "Canarias", "13:30", 1.30, 56, "http://www.lavanguardia.com/r/GODO/LV/p4/WebSite/2017/08/28/Recortada/img_cpizcueto_20170828-120600_imagenes_lv_terceros_avion-kN7-U43885684875JvF-992x558@LaVanguardia-Web.jpg"));
+        vueloList.add(new Vuelo("Canarias", "Almería", "13:30", 1.50, 75, "http://www.lavanguardia.com/r/GODO/LV/p4/WebSite/2017/08/28/Recortada/img_cpizcueto_20170828-120600_imagenes_lv_terceros_avion-kN7-U43885684875JvF-992x558@LaVanguardia-Web.jpg"));
+        vueloList.add(new Vuelo("Jaén", "Madrid", "13:30", 1, 311, "http://www.lavanguardia.com/r/GODO/LV/p4/WebSite/2017/08/28/Recortada/img_cpizcueto_20170828-120600_imagenes_lv_terceros_avion-kN7-U43885684875JvF-992x558@LaVanguardia-Web.jpg"));
 
         // Set the adapter
         if (view instanceof RecyclerView) {
@@ -70,26 +70,26 @@ public class VueloFragment extends Fragment {
     }
 
 
-    /*
+
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        if (context instanceof OnListFragmentInteractionListener) {
-            mListener = (OnListFragmentInteractionListener) context;
+        if (context instanceof OnVueloInteractionListener) {
+            mListener = (OnVueloInteractionListener) context;
         } else {
             throw new RuntimeException(context.toString()
                     + " must implement OnListFragmentInteractionListener");
         }
     }
-    */
 
-    /*
+
+
     @Override
     public void onDetach() {
         super.onDetach();
         mListener = null;
     }
-    */
+
 
     /**
      * This interface must be implemented by activities that contain this

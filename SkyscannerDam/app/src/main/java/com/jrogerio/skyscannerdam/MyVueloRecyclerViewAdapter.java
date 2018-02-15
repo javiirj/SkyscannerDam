@@ -19,9 +19,9 @@ public class MyVueloRecyclerViewAdapter extends RecyclerView.Adapter<MyVueloRecy
 
     private Context ctx;
     private final List<Vuelo> mValues;
-    private final OnListFragmentInteractionListener mListener;
+    private final OnVueloInteractionListener mListener;
 
-    public MyVueloRecyclerViewAdapter(Context context, List<Vuelo> items, OnListFragmentInteractionListener listener) {
+    public MyVueloRecyclerViewAdapter(Context context, List<Vuelo> items, OnVueloInteractionListener listener) {
         ctx = context;
         mValues = items;
         mListener = listener;
@@ -56,7 +56,7 @@ public class MyVueloRecyclerViewAdapter extends RecyclerView.Adapter<MyVueloRecy
                 if (null != mListener) {
                     // Notify the active callbacks interface (the activity, if the
                     // fragment is attached to one) that an item has been selected.
-                    mListener.onListFragmentInteraction(holder.mItem);
+                    mListener.onVueloClick(holder.mItem);
                 }
             }
         });
